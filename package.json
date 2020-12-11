@@ -8,7 +8,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate-production": "postgrator --config postgrator-production-config.js",
+    "start": "node src/server.js",
+    "predeploy": "npm audit && npm run migrate-production",
+    "deploy": "git push heroku master"
   },
   "keywords": [],
   "author": "",

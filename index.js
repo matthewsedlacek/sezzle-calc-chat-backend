@@ -23,6 +23,6 @@ app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}.`);
 });
 
-http.listen(PORT, () => {
-  console.log("Listening on" + PORT);
-});
+// http.listen(PORT, () => {
+//   console.log("Listening on" + PORT);
+// });
