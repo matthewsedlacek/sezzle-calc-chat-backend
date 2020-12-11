@@ -1,11 +1,10 @@
 const Pool = require("pg").Pool;
 const pool = new Pool({
-    dbname="d6hadta3u0um4g", 
-    host="ec2-54-208-233-243.compute-1.amazonaws.com",
-    port=5432,
-    user="ynxfswvevbsccw", 
-    password="c92dc1792beb6c25c822e0211f7689af8f641965691ae720b46194b6e9531030", 
-    // sslmode=require
+  user: "me",
+  host: "localhost",
+  database: "api",
+  password: "password",
+  port: 5432,
 });
 
 const getMessages = (request, response) => {
