@@ -1,6 +1,6 @@
 const Pool = require("pg").Pool;
 const pool = new Pool({
-    dbname="d6hadta3u0um4g", 
+    // dbname="d6hadta3u0um4g", 
     host="ec2-54-208-233-243.compute-1.amazonaws.com",
     port=5432,
     user="ynxfswvevbsccw", 
