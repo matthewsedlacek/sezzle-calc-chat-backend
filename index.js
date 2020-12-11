@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const db = require("./queries");
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(
@@ -19,6 +19,10 @@ app.get("/messages", db.getMessages);
 
 app.post("/messages", db.createMessage);
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}.`);
+app.listen(PORT, () => {
+  console.log(`App running on PORT ${PORT}.`);
+});
+
+http.listen(PORT, () => {
+  console.log("Listening on" + PORT);
 });
